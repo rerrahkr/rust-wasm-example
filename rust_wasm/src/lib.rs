@@ -1,9 +1,13 @@
+use wasm_bindgen::prelude::*;
+
+#[wasm_bindgen(getter_with_clone)]
 pub struct Supporter {
     pub name: String,
     pub supporting_club: String,
     pub year: u32,
 }
 
+#[wasm_bindgen]
 impl Supporter {
     pub fn say(&self) -> String {
         format!(
@@ -13,6 +17,7 @@ impl Supporter {
     }
 }
 
+#[wasm_bindgen]
 pub fn become_supporter(name: &str, year: u32) -> Supporter {
     Supporter {
         name: String::from(name),
