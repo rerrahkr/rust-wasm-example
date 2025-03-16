@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "workspaces": [
+    "rust_wasm/pkg-bundler",
+    "vite-bundler"
+  ]
+}
